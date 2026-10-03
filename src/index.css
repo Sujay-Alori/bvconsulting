@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-wine-primary: #5A2F32;
+    --color-wine-dark: #3E2023;
+    --color-wine-light: #783E43;
+    --color-wine-soft: #FAF1F2;
+    --color-warm-white: #FAF8F5;
+    --color-pure-white: #FFFFFF;
+    --color-gold: #B49A78;
+    --color-gold-light: #D6C5AD;
+    --color-text-main: #242020;
+    --color-text-muted: #6E6565;
+    --color-border-wine: rgba(90, 47, 50, 0.12);
+    --color-border-wine-strong: rgba(90, 47, 50, 0.25);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--color-warm-white);
+    color: var(--color-text-main);
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: 0.05em;
+  }
+
+  .font-technical {
+    font-family: 'Space Grotesk', monospace;
+  }
+}
+
+/* Architectural blueprint grid overlay */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(90, 47, 50, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 47, 50, 0.04) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(180, 154, 120, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(180, 154, 120, 0.07) 1px, transparent 1px);
+}
+
+.bg-fine-dots {
+  background-image: radial-gradient(rgba(90, 47, 50, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #5A2F32;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3E2023;
+}
+
+/* Subtle Wine Shadows */
+.shadow-wine-sm {
+  box-shadow: 0 4px 20px -2px rgba(90, 47, 50, 0.08);
+}
+.shadow-wine-md {
+  box-shadow: 0 12px 32px -4px rgba(90, 47, 50, 0.12);
+}
+.shadow-wine-lg {
+  box-shadow: 0 24px 48px -12px rgba(62, 32, 35, 0.22);
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
